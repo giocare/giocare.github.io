@@ -30,17 +30,17 @@ setTimeout(function(){
 
 // CLICK TO LINGOLDEN PAGE
 $(".lang-dev").on("click", function () {
-	window.location="lingolden.html";
+	window.location="lingolden/lingolden.html";
 });
 
 // CLICK TO APP PAGE
 $(".app-dev").on("click", function () {
-	window.location="app.html";
+	window.location="app/app.html";
 });
 
 // CLICK TO ANIMATION PAGE
 $(".motion-dev").on("click", function () {
-	window.location="motion.html";
+	window.location="animations/motion.html";
 });
 
 // ACTIVATE NAVIGATION
