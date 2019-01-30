@@ -2,6 +2,7 @@
     display: none; 
 }
 
+
 html, body, section, div {
 /*  height: 100%;*/
 }
@@ -17,6 +18,24 @@ body {
 }
 
 html, body{margin:0px; padding:0px;}
+
+.error-img {
+  display: none;
+}
+
+@media (max-width: 1200px){
+.error-img {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #000;
+}
+}
+
 
 /* N A V I G A T I O N  M E N U */
 .overlay-navigation {

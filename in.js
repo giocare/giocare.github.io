@@ -1,8 +1,11 @@
-// TYPEWRITTER EFFECT
-var myFullpage = new fullpage('#fullpage', {
+
+  var myFullpage = new fullpage('#fullpage', {
         sectionsColor: ['white', 'white', 'white', 'white', 'white'],
         navigation: true
     });
+
+// TYPEWRITTER EFFECT
+
 
 new TypeIt('#intro', {
   speed: 50,
@@ -30,17 +33,17 @@ setTimeout(function(){
 
 // CLICK TO LINGOLDEN PAGE
 $(".lang-dev").on("click", function () {
-	window.location="lingolden/lingolden.html";
+	window.location="work/lingolden.html";
 });
 
 // CLICK TO APP PAGE
 $(".app-dev").on("click", function () {
-	window.location="app/app.html";
+	window.location="work/app.html";
 });
 
 // CLICK TO ANIMATION PAGE
 $(".motion-dev").on("click", function () {
-	window.location="animations/motion.html";
+	window.location="work/motion.html";
 });
 
 // ACTIVATE NAVIGATION

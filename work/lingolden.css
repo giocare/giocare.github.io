@@ -1,49 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/*  */
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  background: transparent;
-  box-sizing: border-box;
-  box-shadow: inset 0 0 0 2px white;
-  overflow: hidden;
-}
-#fp-nav ul li a span::after, .fp-slidesNav ul li a span::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 0;
-  border-radius: 50%;
-  left: 0;
-  bottom: 0;
-  background-color: #fff;
-  box-shadow: 0 0 1px #fff;
-  transition: height 0.3s;
-}
-#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  background: transparent;
-  box-sizing: border-box;
-  box-shadow: inset 0 0 0 2px white;
-}
-#fp-nav ul li a.active span::after, .fp-slidesNav ul li a.active span::after, #fp-nav ul li:hover a.active span::after, .fp-slidesNav ul li:hover a.active span::after {
-  height: 100%;
-}
-
-#outro {
-	color: white;
-	font-size: 50px;
-	text-align: center;
-}
-
-/**/
-
-
 .flip_H{ 
 	display: inline-block;
 	position: fixed;
@@ -55,48 +12,87 @@
     z-index: 3;
     
 } 
-
 .flip_H{ transform: scale(-1, 1); color:black; opacity:1; }
 span:hover{ color: #83b0ec; }
 
 
-.section { width: 100%; }
+.section {
+	width: 100%;/*  font-size: 3em;*/}
 
-.header {
+	.header {
 	position: fixed;
+/*	border: 3px solid blue;*/
 	padding: 20px 40px 40px;
+/*	max-width: 25%;*/
 	max-width: 400px; 
-	z-index: 1;
-
+	top: 10%;
+	left: 2%;
 }
-.header-image {
-	display: inline-block;
-	vertical-align: top;
-	width: 30%;
-	margin: 30px 10px 0 0;
-	z-index: -99999;
-}
-.header-text {
-	display: inline-block;
-	width: 50%;
-	z-index: 2;
-	color: white;
-}
-.header-text:nth-of-type(3){color: black;}
-	.header-text2 {
+	.header__image {
 		display: inline-block;
 		vertical-align: top;
-		width: 120%;
-		color: white;
+		width: 30%;
+		margin: 30px 10px 0 0;
+	}
+	.header__text {
+		display: inline-block;
+		width: 50%;
+		@media (max-width: 620px) {
+			width: 100%;
+		}
+	}
+	.header__text_2 {
+    font-family: Calibri; 
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+    display: inline-block;
+    width: 70%;
+    font-size: 1em;
+		vertical-align: top;
+
 }
 
 h1 { font-family: font-family: 'Lora', serif;
 	font-size: 2em;
 }
- p {
- 	font-family: font-family: 'Lora', serif;
- 	font-size: 1.3em;
- }
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+	/*text-align: center;*/
+}
+
+.rectangle {
+	position: fixed;
+	height: 0.4%;
+	width: 100px;
+	background-color: black;
+	top: 15%;
+	left: 5%;
+	z-index: 3;
+}
+
+.bg {
+	position: fixed;
+	background-position: center;
+	background-image: url('../img/mac-mockup-transparent.png');
+	background-size: cover;
+}
+
+.bg-final {
+	position: fixed;
+	background-position: center;
+	background-image: url('../img/Mockup.gif');
+	background-size: cover;
+}
+
+.info-txt {
+	position: fixed;
+	width: 500px;
+	height: 25px;
+	left: 5%;
+	top: 22%;
+}
 
 .project-nom {
 	position: fixed;
@@ -105,51 +101,98 @@ h1 { font-family: font-family: 'Lora', serif;
 	z-index: 3;
 	font-family: font-family: 'Lora', serif;
 	font-size: 1.2em;
+
 }
 
-
-.introimg {
-	background-position: center;
-	background-image: url('../img/iphone-x-header.png');
-	background-size: cover;
-	z-index: 0;
+.img-container {
+	width: 70%;
+	height: 100%;
+	float: right;
+  padding-top: 5%;
 }
 
-.sec-asset {
-	background-position: center;
-	background-image: url('../img/ui-kit-3.png'); 
+.sec-images img {
+	width: 15%; 
+	float: right;
+	margin: 2.2%; 
+
+  }
+
+@media screen and (max-width: 1600px) {
+  .sec-images img {
+    width: 20%;
+    margin: 1%;
+  }
 }
 
-#assets {
-	color: black;
+@media screen and (max-width: 1000px) {
+  .sec-images img {
+    width: 25%;
+    margin: 2%;
+  }
 }
 
-#imageremove {
-	z-index: -999;
-}
-.sec-mock {
-	background-position: center;
-	background-image: url('../img/iphone-x-mockup2.png');
-	background-size: cover;
+.process-info {
+	position: fixed;
+	right: 45%;
+	top: 0;
+
 }
 
-.sec-demo {     
-	background-position: center;     
-	background-image: url('../img/iphone.gif');     
-	background-size: cover; }
+.process-info h3 {
+	right 40%;
+	font-size: 2em;
 
+}
+
+.procimage {
+	 object-fit: cover;
+	 width: 350px;
+	 height: 450px;
+
+}
+
+.container {
+	position: relative;
+	max-width: 800px;
+	margin-left: 40%;
+	top:0.5%;
+
+
+}
+.container__image {
+	object-fit: cover;
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	 height: 300px;
+	margin: 0px 30px 10px 10px;
+}
+.container__text {
+	display: inline-block;
+	width: 46%;
+	@media (max-width: 620px) {
+		width: 100%;
+	}
+}
+
+a {
+	text-decoration: underline;
+}
+
+.header__text_2 p {
+	font-size: 1.2em;
+}
 
 
 
 
 
 /* ========== SECTION 1 - content animation ========== */
-.secintro > .fp-tableCell h1,
-.sec-wire > .fp-tableCell h1,
-.sec-asset > .fp-tableCell h1,
-.sec-mock > .fp-tableCell h1,
-.sec-demo > .fp-tableCell h1,
-.sec-status > .fp-tableCell h1
+.sec-intro > .fp-tableCell h1,
+.sec-process > .fp-tableCell h1,
+.sec-imgg > .fp-tableCell h1,
+.sec-done > .fp-tableCell h1
  {
 	transform: translateY(-1000px);
 	opacity: 0;
@@ -157,19 +200,18 @@ h1 { font-family: font-family: 'Lora', serif;
 				opacity .8s ease-in-out;
 }
 
-.secintro.active > .fp-tableCell h1,
-.sec-wire.active > .fp-tableCell h1,
-.sec-asset.active > .fp-tableCell h1,
-.sec-mock.active > .fp-tableCell h1,
-.sec-demo.active > .fp-tableCell h1,
-.sec-status.active > .fp-tableCell h1
+.sec-intro.active > .fp-tableCell h1,
+.sec-process.active > .fp-tableCell h1,
+.sec-imgg.active > .fp-tableCell h1,
+.sec-done.active > .fp-tableCell h1
 {
 	transform: translateY(0);
 	opacity: 1;
 }
 
-.secintro > .fp-tableCell h2,
-.sec-wire > .fp-tableCell h2,
+.sec-intro > .fp-tableCell h2,
+.sec-process > .fp-tableCell h2,
+.sec-imgg > .fp-tableCell h2,
 .sec-done > .fp-tableCell h2
 {
 	transform: translateX(100%);
@@ -178,68 +220,55 @@ h1 { font-family: font-family: 'Lora', serif;
 				opacity .8s ease-in-out;
 }
 
-.secintro > .fp-tableCell h2+ h2,
-.sec-wire > .fp-tableCell h2+ h2,
+.sec-intro > .fp-tableCell h2+ h2,
+.sec-process > .fp-tableCell h2+ h2,
+.sec-imgg > .fp-tableCell h2+ h2,
 .sec-done > .fp-tableCell h2+ h2
 {
 	transform: translateX(-100%);
 }
 
-.secintro > .fp-tableCell h2+ h2+ h2,
-.sec-wire > .fp-tableCell h2+ h2+ h2,
+.sec-intro > .fp-tableCell h2+ h2+ h2,
+.sec-process > .fp-tableCell h2+ h2+ h2,
+.sec-imgg > .fp-tableCell h2+ h2+ h2,
 .sec-done > .fp-tableCell h2+ h2+ h2
 {
 	transform: translateX(0) translateY(0);
 	transform: translateY(1000px);
 }
 
-.secintro.active > .fp-tableCell h2,
-.sec-wire.active > .fp-tableCell h2,
+.sec-intro.active > .fp-tableCell h2,
+.sec-process.active > .fp-tableCell h2,
+.sec-imgg.active > .fp-tableCell h2,
 .sec-done.active > .fp-tableCell h2
 {
 	transform: translateX(0);
 	opacity: 1;
 }
 
-.secintro.active > .fp-tableCell h2,
-.sec-wire.active > .fp-tableCell h2,
+.sec-intro.active > .fp-tableCell h2,
+.sec-process.active > .fp-tableCell h2,
+.sec-imgg.active > .fp-tableCell h2,
 .sec-done.active > .fp-tableCell h2
 {
 	transition-delay: .2s;
 }
 
-.secintro.active > .fp-tableCell h2+ h2,
-.sec-wire.active > .fp-tableCell h2+ h2,
+.sec-intro.active > .fp-tableCell h2+ h2,
+.sec-process.active > .fp-tableCell h2+ h2,
 .sec-imgg.active > .fp-tableCell h2+ h2,
 .sec-done.active > .fp-tableCell h2+ h2
 {
 	transition-delay: .4s;
 }
 
-.secintro.active > .fp-tableCell h2+ h2+ h2,
-.sec-wire.active > .fp-tableCell h2+ h2+ h2,
+.sec-intro.active > .fp-tableCell h2+ h2+ h2,
+.sec-process.active > .fp-tableCell h2+ h2+ h2,
 .sec-imgg.active > .fp-tableCell h2+ h2+ h2,
 .sec-done.active > .fp-tableCell h2+ h2+ h2,
 {
 	transition-delay: .6s;
 }
-
-
-.sec-status > .fp-tableCell h2
- {
-	/*transform: translateY(-1000px);*/
-	opacity: 0;
-	/*transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
-				opacity .8s ease-in-out;*/
-}
-
-
-.sec-status.active > .fp-tableCell h2
-{
-/*	transform: translateY(0);*/
-	opacity: 1;
-}
-
 
 .overlay-navigation {
   position: fixed;
@@ -612,10 +641,10 @@ Animation keyframes
 	font-weight: 700;
 	top: 0;
 	right: 0;
-    z-index: 4; 
-    opacity: 1;
+  z-index: 4; 
+  opacity: 1;
 
-    -webkit-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;   
@@ -628,8 +657,7 @@ Animation keyframes
 	font-weight: 700;
 	top: 0;
 	right: 0;
-    z-index: 4;    
+  z-index: 4;    
 } 
 
-/*.flip_H{ transform: scale(-1, 1); color:black; opacity:1; }*/
 #logo:hover{pointer:cursor; opacity: 0;}
