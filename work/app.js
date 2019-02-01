@@ -11,9 +11,7 @@ new fullpage('#fullpage', {
 
 new TypeIt('#outro', {
   speed: 50,
-  startDelay: 900,
-  loop: true,
-  loopDelay: null	
+  startDelay: 900,	
 })
 .type('the app ')
 .pause(300)
